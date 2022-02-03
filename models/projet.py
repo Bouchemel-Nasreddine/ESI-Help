@@ -10,6 +10,6 @@ class Demande(models.Model):
     _description = "desc"
 
     code = fields.Char(string='code',  required=True)
-    description = fields.Char(string='description', required=True)
+    description = fields.Text(string='description', required=True)
     coordonnees = fields.Char(string='coordonnees')
     date_limit = fields.Date(string="date limite")

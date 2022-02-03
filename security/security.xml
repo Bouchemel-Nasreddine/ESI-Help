@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_esi_help_projet" model="res.groups">
+        <field name="name">ESI Help Administrateur</field>
+        <!--<field name=""></field>
+        <field name=""></field>-->
+    </record>
+
+
+
+</odoo>

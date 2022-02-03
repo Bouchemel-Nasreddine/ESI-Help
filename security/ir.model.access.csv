@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_demande,access.demande,model_esi_help_demande,,1,1,1,1
+access_projet,access.projet,model_esi_help_projet,group_esi_help_projet,1,1,1,1

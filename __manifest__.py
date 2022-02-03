@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'ESI Help',
-    'category': 'Marketing',
+    'category': 'Administration',
     'description': """
     
 """,
@@ -10,6 +10,10 @@
     'depends': [
     ],
     'data': [
+        'security/ir.model.access.csv',
+        'security/security.xml',
+        'views/demande.xml',
+        'views/projet.xml',
     ],
     'installable': True,
     'application': True,

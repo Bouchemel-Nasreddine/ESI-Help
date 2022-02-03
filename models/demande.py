@@ -11,7 +11,12 @@ class Demande(models.Model):
     _description = "desc"
 
     name = fields.Char(string='titre',  required=True)
-    Date = fields.Date()
-    Archive = fields.Boolean(default =False)
-    contenu = fields.Char(string='contenu', required=True)
-    nature = fields.Char(string='nature', Required=True)
+    contenu = fields.Text(string='contenu', required=True)
+    nature = fields.Selection(
+        [
+            ('finance', 'demande financiere'),
+            ('assiste', 'assistance sur un projet'),
+            ('trajet', 'trajet à faire'),
+            ('médic', 'demande de médicament'),
+        ], 
+        required=True)
