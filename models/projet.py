@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
+from setuptools import Require
+from odoo import api, fields, models, _
+
+class Demande(models.Model):
+
+    _name = "esi_help.projet"
+    _description = "desc"
+
+    code = fields.Char(string='code',  required=True)
+    description = fields.Char(string='description', required=True)
+    coordonnees = fields.Char(string='coordonnees')
+    date_limit = fields.Date(string="date limite")
