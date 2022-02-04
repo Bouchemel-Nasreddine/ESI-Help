@@ -6,6 +6,10 @@
         <field name="model">esi_help.demande</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button id="valider_btn" name="action_valider" string="valider" type="object" class="btn-primary"/>
+                    <button id="creer_projet_btn" name="action_creer_projet" string="créer projet" type="object" class="btn-primary"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="name"/>
