@@ -5,16 +5,16 @@
         <field name="name">esi_help.projet.form</field>
         <field name="model">esi_help.projet</field>
         <field name="arch" type="xml">
-            <form>
+            <form create="false">
                 <sheet>
                     <group>
-                        <field name="code"/>
+                        <field name="name"/>
                         <field name="description"/>
                         <field name="coordonnees"/>
                         <field name="date_limit"/>
                     </group>    
                 </sheet>
-            </form>
+            </form>            
         </field>
     </record>
 

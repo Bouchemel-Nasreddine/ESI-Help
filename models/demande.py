@@ -11,8 +11,8 @@ class Demande(models.Model):
     _name = "esi_help.demande"
     _description = "desc"
 
-    etat_validation = False
-
+    etat_validation = fields.Boolean(String='status')
+    user_id = fields.Many2one('res.users', String='demandeur', required=True)
     name = fields.Char(string='titre',  required=True)
     contenu = fields.Text(string='contenu', required=True)
     nature = fields.Selection(
@@ -23,11 +23,20 @@ class Demande(models.Model):
             ('médic', 'demande de médicament'),
         ], 
         required=True)
-    #etat_validation = fields.Boolean(_etat_validation)
+        
+    #la fonction de validation du demande, le boutton valider va se disparaitre, et le boutton creer projet va s'affihcer
     def action_valider (self):
-        #self.etat_validation=True
-        print('mmmm')
-    def action_creer_projet (self):
-        if self.etat_validation :
-            print('mmm')
+        self.etat_validation=True
+
+    #la foncion du creation du projet automatiquement
+    def action_creer_projet(self):
+        name = _('Créer projet')
+        return {
+            'name': name,
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'esi_help.projet',
+            'type': 'ir.actions.act_window',
+            'target': 'current',
+}
         

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id="rapport_demande" model="ir.actions.report">
+        <field name="name">rapport demande</field>
+        <field name="model">esi_help.demande</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">esi_help.rapport_demande</field>
+        <field name="report_file">esi_help.rapport_demande</field>
+        <field name="binding_model_id" ref ="model_esi_help_demande"/>
+        <field name="binding_type">report</field>
+    </record>
+    <record id="rapport_projet" model="ir.actions.report">
+        <field name="name">rapport projet</field>
+        <field name="model">esi_help.projet</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">esi_help.rapport_projet</field>
+        <field name="report_file">esi_help.rapport_projet</field>
+        <field name="binding_model_id" ref ="model_esi_help_projet"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

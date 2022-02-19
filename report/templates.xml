@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="esi_help.rapport_demande">
+   
+       <t t-call="web.basic_layout">
+       <t t-foreach="docs" t-as="o">
+       <t t-if="o.etat_validation == True">
+            <div class="page">
+                <div class="oe_structure"/>
+                    <div class="row">
+                        <div class="col-xs-8">
+                           <table class="table table-condensed" style="border:3px solid green !important;">
+                                <tr>
+                                   <td width="100%">
+                                       <table>
+                                          <tr>
+                                             <td>
+                                                 <span>
+                                                     <strong>titre</strong>
+                                                 </span>
+                                             </td>
+                                             <td>
+                                                 <span>:</span>
+                                             </td>
+                                             <td>
+                                                 <span t-field="o.name"/>
+                                             </td>
+                                           </tr>
+                                           <tr>
+                                             <td>
+                                                 <span>
+                                                     <strong>nature</strong>
+                                                 </span>
+                                             </td>
+                                             <td>
+                                                 <span>:</span>
+                                             </td>
+                                             <td>
+                                                 <span t-field="o.nature"/>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>
+                                                 <span>
+                                                     <strong>contenu </strong>
+                                                 </span>
+                                             </td>
+                                             <td>
+                                                 <span>:</span>
+                                             </td>
+                                             <td>
+                                                 <span t-field="o.contenu"/>
+                                             </td>
+                                          </tr>
+                                       </table>
+                                   </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </t>
+        </t>
+    </t>
+ </template>
+ </odoo>

@@ -7,14 +7,16 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button id="valider_btn" name="action_valider" string="valider" type="object" class="btn-primary"/>
-                    <button id="creer_projet_btn" name="action_creer_projet" string="créer projet" type="object" class="btn-primary"/>
+                    <button id="valider_btn" name="action_valider" string="valider" type="object" class="btn-primary" attrs="{'invisible':[('etat_validation', '=', True)]}"/>
+                    <button id="creer_projet_btn" name="action_creer_projet" string="créer projet" type="object" class="btn-primary"  attrs="{'invisible':[('etat_validation', '!=', True)]}"/>
                 </header>
                 <sheet>
                     <group>
                         <field name="name"/>
                         <field name="nature"/>
                         <field name="contenu"/>
+                        <field name="user_id"/>
+                        <field name="etat_validation" invisible="1"/>
                     </group>    
                 </sheet>
             </form>
